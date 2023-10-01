@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/CSS/admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <button onclick="window.location.href='/logout'" class="logout">Logout</button>
+        </div>
+        <div class="body">
+            <h1>Users list</h1>
+            <div class="attendance">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let i=1 %>
+                        <% for(let user of users){ %>
+                        <tr>
+                            <td><%= i %></td>
+                            <td><%= user.name %></td>
+                            <td><%=  user.email %></td>
+                            <td>
+                                <form action="/user/delete" method="post">
+                                    <input type="hidden" name="user" value="<%= user.email %>" >
+                                    <button>Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% i++ %>
+                        <% } %>
+                        <tr>
+                            <form action="/user/add" method="post">
+                                <td><%= i %></td>
+                                <td><input type="text" name="name" placeholder="Name" required></td>
+                                <td><input type="text" name="email" placeholder="Email" required id="email"></td>
+                                <td><button>ADD</button></td>
+                            </form>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

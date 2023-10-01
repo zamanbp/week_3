@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#home" style="background-color: #cbcaca;">Home</a>
+            <a href="/user/edit">Profile</a>
+            <button class="logout" id="logout" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+        <div class="body">
+            <div class="details">
+                <div class="info">
+                    <h1>WELCOME <%= name %></h1>
+                    <p>User details goes here</p>
+                </div>
+                <div class="pic">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCbjdEAA_iKW6KLEBOB_01XOdQjvnBqdUslNPycIanwQqvji_15mW5kfPQsziLLhdGwvA&usqp=CAU">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#home" style="background-color: #cbcaca;">Home</a>
+            <a href="/user/edit">Profile</a>
+            <form action="/logout" method="get" style="display: inline;">
+                <button type="submit" class="logout">Logout</button>
+            </form>
+        </div>
+        <div class="body">
+            <div class="details">
+                <div class="info">
+                    <h1>WELCOME <%= name %></h1>
+                    <p>User details go here</p>
+                </div>
+                <div class="pic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCbjdEAA_iKW6KLEBOB_01XOdQjvnBqdUslNPycIanwQqvji_15mW5kfPQsziLLhdGwvA&usqp=CAU">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
